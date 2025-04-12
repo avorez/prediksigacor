@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prediksi Parlay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Prediksi Parlay</h1>
+    <form id="prediksiForm">
+      <div class="input-form">
+        <label>Tim A:</label>
+        <input type="text" id="timA" required>
+      </div>
+      <div class="input-form">
+        <label>Tim B:</label>
+        <input type="text" id="timB" required>
+      </div>
+      <div class="input-form">
+        <label>Skor 5 Laga Terakhir Tim A:</label>
+        <input type="text" id="lagaA" placeholder="Contoh: 2,1,2,3,1" required>
+      </div>
+      <div class="input-form">
+        <label>Skor 5 Laga Terakhir Tim B:</label>
+        <input type="text" id="lagaB" placeholder="Contoh: 1,0,2,2,1" required>
+      </div>
+      <div class="input-form">
+        <label>Kebobolan 5 Laga Terakhir Tim A:</label>
+        <input type="text" id="kebobolanA" placeholder="Contoh: 1,1,2,1,0" required>
+      </div>
+      <div class="input-form">
+        <label>Kebobolan 5 Laga Terakhir Tim B:</label>
+        <input type="text" id="kebobolanB" placeholder="Contoh: 2,2,1,3,1" required>
+      </div>
+      <div class="input-form">
+        <label>Pasaran Over/Under (contoh: 2.5):</label>
+        <input type="number" id="pasaran" step="0.1" min="0.1" required>
+      </div>
+      <button type="button" onclick="prediksiSemua()">Tambah ke List</button>
+      <button type="button" onclick="resetSemua()">Reset Semua</button>
+      <button type="button" onclick="downloadJPG()">Simpan ke JPG</button>
+    </form>
+
+    <h2>Hasil Prediksi:</h2>
+    <div id="hasil-list"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
